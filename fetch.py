@@ -41,4 +41,3 @@ if __name__ == "__main__":
     output = {"timestamp": str(datetime.utcnow()), "results": results}
     with open("output/results.json", "w") as f:
         json.dump(output, f, indent=2)
-
