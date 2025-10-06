@@ -3,7 +3,7 @@ name: Auction Fetcher
 on:
   schedule:
     - cron: "0 * * * *"   # every hour
-  workflow_dispatch:       # allow manual trigger too
+  workflow_dispatch:       # allow manual trigger
 
 jobs:
   run-script:
@@ -18,7 +18,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r requirements.txt
 
       - name: Run fetch script
         env:
